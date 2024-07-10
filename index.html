@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meldy y los secretos vocales</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Derivia&display=swap');
+
+        body {
+            font-family: 'Derivia', sans-serif;
+            background-color: #f0e6f7; /* Fondo morado claro */
+            padding: 20px;
+            text-align: center; /* Centrar el texto */
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #4B0082; /* Morado oscuro */
+        }
+
+        h2 {
+            font-size: 25px;
+            color: #4B0082; /* Morado oscuro */
+            margin-top: 0; /* Reducir el margen superior */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centrar las imágenes */
+        }
+
+        .thumbnail {
+            width: 150px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 80vw;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+
+        .modal video {
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #000;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meldy y los secretos vocales</h1>
+    <h2>para técnica vocal</h2>
+
+    <div class="gallery">
+        <img src="imagen1.png" alt="Imagen 1" class="thumbnail" data-video="video1.mp4">
+        <img src="imagen2.png" alt="Imagen 2" class="thumbnail" data-video="video2.mp4">
+        <img src="imagen3.png" alt="Imagen 3" class="thumbnail" data-video="video3.mp4">
+        <img src="imagen4.png" alt="Imagen 4" class="thumbnail" data-video="video4.mp4">
+        <img src="imagen5.png" alt="Imagen 5" class="thumbnail" data-video="video5.mp4">
+        <img src="imagen6.png" alt="Imagen 6" class="thumbnail" data-video="video6.mp4">
+        <img src="imagen7.png" alt="Imagen 7" class="thumbnail" data-video="video7.mp4">
+        <img src="imagen8.png" alt="Imagen 8" class="thumbnail" data-video="video8.mp4">
+        <img src="imagen9.png" alt="Imagen 9" class="thumbnail" data-video="video9.mp4">
+        <img src="imagen10.png" alt="Imagen 10" class="thumbnail" data-video="video10.mp4">
+        <img src="imagen11.png" alt="Imagen 11" class="thumbnail" data-video="video11.mp4">
+        <img src="imagen12.png" alt="Imagen 12" class="thumbnail" data-video="video12.mp4">
+        <img src="imagen13.png" alt="Imagen 13" class="thumbnail" data-video="video13.mp4">
+        <img src="imagen14.png" alt="Imagen 14" class="thumbnail" data-video="video14.mp4">
+        <img src="imagen15.png" alt="Imagen 15" class="thumbnail" data-video="video15.mp4">
+        <img src="imagen16.png" alt="Imagen 16" class="thumbnail" data-video="video16.mp4">
+        <img src="imagen17.png" alt="Imagen 17" class="thumbnail" data-video="video17.mp4">
+        <img src="imagen18.png" alt="Imagen 18" class="thumbnail" data-video="video18.mp4">
+        <img src="imagen19.png" alt="Imagen 19" class="thumbnail" data-video="video19.mp4">
+        <img src="imagen20.png" alt="Imagen 20" class="thumbnail" data-video="video20.mp4">
+        <img src="imagen21.png" alt="Imagen 21" class="thumbnail" data-video="video21.mp4">
+        <img src="imagen22.png" alt="Imagen 22" class="thumbnail" data-video="video22.mp4">
+        <img src="imagen23.png" alt="Imagen 23" class="thumbnail" data-video="video23.mp4">
+        <img src="imagen24.png" alt="Imagen 24" class="thumbnail" data-video="video24.mp4">
+        <img src="imagen25.png" alt="Imagen 25" class="thumbnail" data-video="video25.mp4">
+        <img src="imagen26.png" alt="Imagen 26" class="thumbnail" data-video="video26.mp4">
+        <img src="imagen27.png" alt="Imagen 27" class="thumbnail" data-video="video27.mp4">
+        <img src="imagen28.png" alt="Imagen 28" class="thumbnail" data-video="video28.mp4">
+        <img src="imagen29.png" alt="Imagen 29" class="thumbnail" data-video="video29.mp4">
+        <img src="imagen30.png" alt="Imagen 30" class="thumbnail" data-video="video30.mp4">
+        <img src="imagen31.png" alt="Imagen 31" class="thumbnail" data-video="video31.mp4">
+        <img src="imagen32.png" alt="Imagen 32" class="thumbnail" data-video="video32.mp4">
+        <img src="imagen33.png" alt="Imagen 33" class="thumbnail" data-video="video33.mp4">
+        <img src="imagen34.png" alt="Imagen 34" class="thumbnail" data-video="video34.mp4">
+        <img src="imagen35.png" alt="Imagen 35" class="thumbnail" data-video="video35.mp4">
+        <img src="imagen36.png" alt="Imagen 36" class="thumbnail" data-video="video36.mp4">
+        <img src="imagen37.png" alt="Imagen 37" class="thumbnail" data-video="video37.mp4">
+        <img src="imagen38.png" alt="Imagen 38" class="thumbnail" data-video="video38.mp4">
+        <img src="imagen39.png" alt="Imagen 39" class="thumbnail" data-video="video39.mp4">
+        <img src="imagen40.png" alt="Imagen 40" class="thumbnail" data-video="video40.mp4">
+        <img src="imagen41.png" alt="Imagen 41" class="thumbnail" data-video="video41.mp4">
+        <img src="imagen42.png" alt="Imagen 42" class="thumbnail" data-video="video42.mp4">
+        <img src="imagen43.png" alt="Imagen 43" class="thumbnail" data-video="video43.mp4">
+        <img src="imagen44.png" alt="Imagen 44" class="thumbnail" data-video="video44.mp4">
+        <img src="imagen45.png" alt="Imagen 45" class="thumbnail" data-video="video45.mp4">
+        <img src="imagen46.png" alt="Imagen 46" class="thumbnail" data-video="video46.mp4">
+        <img src="imagen47.png" alt="Imagen 47" class="thumbnail" data-video="video47.mp4">
+        <img src="imagen48.png" alt="Imagen 48" class="thumbnail" data-video="video48.mp4">
+        <img src="imagen49.png" alt="Imagen 49" class="thumbnail" data-video="video49.mp4">
+        <img src="imagen50.png" alt="Imagen 50" class="thumbnail" data-video="video50.mp4">
+        <img src="imagen51.png" alt="Imagen 51" class="thumbnail" data-video="video51.mp4">
+        <img src="imagen52.png" alt="Imagen 52" class="thumbnail" data-video="video52.mp4">
+        <img src="imagen53.png" alt="Imagen 53" class="thumbnail" data-video="video53.mp4">
+        <img src="imagen54.png" alt="Imagen 54" class="thumbnail" data-video="video54.mp4">
+        <img src="imagen55.png" alt="Imagen 55" class="thumbnail" data-video="video55.mp4">
+        <img src="imagen56.png" alt="Imagen 56" class="thumbnail" data-video="video56.mp4">
+        <img src="imagen57.png" alt="Imagen 57" class="thumbnail" data-video="video57.mp4">
+        <img src="imagen58.png" alt="Imagen 58" class="thumbnail" data-video="video58.mp4">
+        <img src="imagen59.png" alt="Imagen 59" class="thumbnail" data-video="video59.mp4">
+        <img src="imagen60.png" alt="Imagen 60" class="thumbnail" data-video="video60.mp4">
+        <img src="imagen61.png" alt="Imagen 61" class="thumbnail" data-video="video61.mp4">
+        <img src="imagen62.png" alt="Imagen 62" class="thumbnail" data-video="video62.mp4">
+        <img src="imagen63.png" alt="Imagen 63" class="thumbnail" data-video="video63.mp4">
+        <img src="imagen64.png" alt="Imagen 64" class="thumbnail" data-video="video64.mp4">
+        <img src="imagen65.png" alt="Imagen 65" class="thumbnail" data-video="video65.mp4">
+        <img src="imagen66.png" alt="Imagen 66" class="thumbnail" data-video="video66.mp4">
+        <img src="imagen67.png" alt="Imagen 67" class="thumbnail" data-video="video67.mp4">
+        <img src="imagen68.png" alt="Imagen 68" class="thumbnail" data-video="video68.mp4">
+        <img src="imagen69.png" alt="Imagen 69" class="thumbnail" data-video="video69.mp4">
+        <img src="imagen70.png" alt="Imagen 70" class="thumbnail" data-video="video70.mp4">
+        <img src="imagen71.png" alt="Imagen 71" class="thumbnail" data-video="video71.mp4">
+        <img src="imagen72.png" alt="Imagen 72" class="thumbnail" data-video="video72.mp4">
+        <img src="imagen73.png" alt="Imagen 73" class="thumbnail" data-video="video73.mp4">
+        <img src="imagen74.png" alt="Imagen 74" class="thumbnail" data-video="video74.mp4">
+        <img src="imagen75.png" alt="Imagen 75" class="thumbnail" data-video="video75.mp4">
+        <img src="imagen76.png" alt="Imagen 76" class="thumbnail" data-video="video76.mp4">
+        <img src="imagen77.png" alt="Imagen 77" class="thumbnail" data-video="video77.mp4">
+        <!-- Añade más imágenes según sea necesario -->
+    </div>
+
+    <div id="videoModal" class="modal">
+        <span class="close">&times;</span>
+        <video id="videoPlayer" controls>
+            <source src="" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const thumbnails = document.querySelectorAll(".thumbnail");
+            const modal = document.getElementById("videoModal");
+            const videoPlayer = document.getElementById("videoPlayer");
+            const closeBtn = document.querySelector(".close");
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener("click", function() {
+                    const videoSrc = thumbnail.getAttribute("data-video");
+                    videoPlayer.src = videoSrc;
+                    modal.style.display = "block";
+                    videoPlayer.play();
+
+                    videoPlayer.addEventListener('ended', function() {
+                        modal.style.display = "none";
+                        videoPlayer.src = "";
+                        reorganizeImages();
+                    }, { once: true });
+                });
+            });
+
+            closeBtn.addEventListener("click", function() {
+                modal.style.display = "none";
+                videoPlayer.pause();
+                videoPlayer.src = "";
+                reorganizeImages();
+            });
+
+            window.addEventListener("click", function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    videoPlayer.pause();
+                    videoPlayer.src = "";
+                    reorganizeImages();
+                }
+            });
+
+            function reorganizeImages() {
+                const gallery = document.querySelector('.gallery');
+                const images = Array.from(gallery.children);
+                images.sort(() => Math.random() - 0.5);
+                images.forEach(image => gallery.appendChild(image));
+            }
+        });
+    </script>
+</body>
+</html>
